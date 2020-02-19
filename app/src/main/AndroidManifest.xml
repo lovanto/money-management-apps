@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lovanto.keuangan">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        //cropImage
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".activity.KeuanganActivity"
+            android:label="@string/title_activity_keuangan" />
+        <activity
+            android:name=".activity.TentangActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert" />
+        <activity android:name=".activity.TambahActivity" />
+        <activity android:name=".activity.Welcome" />
+        <activity
+            android:name=".activity.UpdateActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert" />
+        <activity android:name=".activity.Main2Activity" />
+        <activity android:name=".activity.StartupActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.PersonActivity" />
+        <activity
+            android:name=".activity.DeleteActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert" />
+    </application>
+
+</manifest>
